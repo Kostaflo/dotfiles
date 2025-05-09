@@ -3,4 +3,7 @@ theme = catppuccin-mocha
 font-family = CaskaydiaCove Nerd Font Mono
 font-size = 18
 background-opacity = 0.9
+shell-integration-features = no-cursor
+cursor-style = block
+gtk-titlebar = false
 
