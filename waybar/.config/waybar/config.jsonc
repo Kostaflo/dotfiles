@@ -1,18 +1,10 @@
-/***
- *    ┓ ┏┏┓┓┏┳┓┏┓┳┓  ┳┳┓┳┳┓┳┳┳┓┏┓┓   ┏┓┏┓┳┓┏┓┳┏┓
- *    ┃┃┃┣┫┗┫┣┫┣┫┣┫━━┃┃┃┃┃┃┃┃┃┃┣┫┃ ━━┃ ┃┃┃┃┣ ┃┃┓
- *    ┗┻┛┛┗┗┛┻┛┛┗┛┗  ┛ ┗┻┛┗┻┛ ┗┛┗┗┛  ┗┛┗┛┛┗┻ ┻┗┛
- *                                              
- */
-
-
 {
 	"layer": "top",
 	"position": "top",
 	"reload_style_on_change": true,
-	"modules-left": ["custom/arch","clock"],
+	"modules-left": ["custom/arch"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["network","pulseaudio","battery"],
+	"modules-right": ["network","pulseaudio","battery","clock"],
 
 
 	"hyprland/workspaces": {
@@ -27,40 +19,28 @@
 		}
 	},
 	"custom/arch": {
-		"format": "<span size='15000'>󰣇</span>",
+		"format": "<span size='15000'>󰣇 </span>",
 	},
 	"clock": {
-		"format": "{:%I:%M:%S %p}",
-		"interval": 1,   
-		"tooltip-format": "<tt>{calendar}</tt>",
-		"calendar": {
-			"format": {
-				"today": "<span color='#fAfBfC'><b>{}</b></span>"
-			}
-		},
-		"actions": {
-			"on-click-right": "shift_down",
-			"on-click": "shift_up"
-		},
+    		"format": "{:%a %d %H:%M}",
+    		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
 	},
 	"network": {
-    "format-wifi": "<span size='10000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    		"format-wifi": "{essid} <span size='10000' foreground='#f5e0dc'>  </span>",
+    		"format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    		"format-linked": "{ifname} (No IP) ",
+    		"format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+    		"tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
 	},
-	"pulseaudio": {
-		"format": "{volume}% {icon}",
-		"format-muted": "",
-		"format-icons": [
-			"󰖁",
-			"󰖀",
-			"󰕾",
-		],
-		"on-click": "pavucontrol",
-		"on-click-right": "pavucontrol --toggle-mute"
-	},
+  	"pulseaudio": {
+      		"max-volume": 100,
+      		"format": "{volume}% {icon}",
+      		"format-muted": "",
+      		"format-icons": {
+          	"default": ["", "", " "]
+      		},
+      		"on-click": "pavucontrol"
+  	},
 
 	"battery": {
 		"interval":30,
