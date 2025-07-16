@@ -20,6 +20,7 @@
 	},
 	"custom/arch": {
 		"format": "<span size='15000'>󰣇 </span>",
+		"tooltip-format": "<big>Arch Linux</big>",
 	},
 	"clock": {
     		"format": "{:%a %d %H:%M}",
