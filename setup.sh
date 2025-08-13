@@ -8,7 +8,7 @@ sudo pacman -Syu  --needed --noconfirm zsh neovim tmux fzf bat starship zoxide t
 
 # Wayland-specific tools
 echo "Installing Wayland-specific tools..."
-sudo pacman -Syu  --needed --noconfirm wayabar wofi hyprpaper hyprshot hyprlock
+sudo pacman -Syu  --needed --noconfirm waybar wofi hyprpaper hyprshot hyprlock
 
 if [ ! -f ".stow-local-ignore" ]; then
 	git clone https://github.com/Kostaflo/dotfiles.git ~/dotfiles
