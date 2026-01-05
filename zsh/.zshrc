@@ -61,3 +61,6 @@ alias vimage='kitty +kitten icat'
 #Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# Enable Wayland for Firefox
+export MOZ_ENABLE_WAYLAND=1
