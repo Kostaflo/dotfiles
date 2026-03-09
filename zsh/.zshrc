@@ -57,6 +57,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls='ls --color'
 alias vimage='kitty +kitten icat'
+alias fix-mirrors='sudo reflector --latest 15 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 #Shell integrations
 eval "$(fzf --zsh)"
