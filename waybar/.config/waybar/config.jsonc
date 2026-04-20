@@ -1,78 +1,56 @@
 {
-	"layer": "top",
-	"position": "top",
-	"reload_style_on_change": true,
-	"modules-left": ["custom/arch"],
-	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["network","pulseaudio","battery","clock"],
+    "layer": "top",
+    "position": "top",
+    "margin-top": 10,
+    "margin-left": 20, // Adjust these to make the pill wider or narrower
+    "margin-right": 20,
+    "height": 40,
+    "spacing": 15,
 
+    // Module Layout
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery"],
 
-	"hyprland/workspaces": {
-		"format": "{icon}",
-		"format-icons": {
-			"active": "",
-			"default": "",
-			"empty": ""
-		},
-		"persistent-workspaces": {
-			"*": [ 1,2,3,4,5 ]
-		}
-	},
-	"custom/arch": {
-		"format": "<span size='15000'>󰣇 </span>",
-		"tooltip-format": "<big>Arch Linux</big>",
-	},
-	"clock": {
-    		"format": "{:%a %d %H:%M}",
-    		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-	},
-	"network": {
-    		"format-wifi": "{essid} <span size='10000' foreground='#f5e0dc'>  </span>",
-    		"format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-    		"format-linked": "{ifname} (No IP) ",
-    		"format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    		"tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
-	},
-  	"pulseaudio": {
-      		"max-volume": 100,
-      		"format": "{volume}% {icon}",
-      		"format-muted": "",
-      		"format-icons": {
-          	"default": ["", "", " "]
-      		},
-      		"on-click": "pavucontrol"
-  	},
+    // --- Module Configurations ---
 
-	"battery": {
-		"interval":30,
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 20
-		},
-		"format": "{capacity}% {icon}",
-		"format-charging": "{capacity}% 󰂄",
-		"format-plugged": "{capacity}% 󰂄 ",
-		"format-alt": "{time} {icon}",
-		"format-icons": [
-			"󰁻",
-			"󰁼",
-			"󰁾",
-			"󰂀",
-			"󰂂",
-			"󰁹"
-		]
-	},
-	//"custom/colorpicker": {
-	//	"format": "{}",
-	//	"return-type": "json",
-	//	"interval": "once",
-	//	"exec": "~/.config/waybar/scripts/Colorpicker.sh -j",
-	//	"on-click": "~/.config/waybar/scripts/Colorpicker.sh",
-	//	"signal": 1
-	//},
-	"tray": {
-		"icon-size": 14,
-		"spacing": 10
-	}
-} 
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 3
+        }
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  %H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 Wired",
+        "format-disconnected": "󰖪 Offline",
+        "tooltip-format": "{ifname} via {gwaddr}"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
