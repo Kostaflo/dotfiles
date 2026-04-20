@@ -2,8 +2,8 @@
     "layer": "top",
     "position": "top",
     "margin-top": 10,
-    "margin-left": 20, // Adjust these to make the pill wider or narrower
-    "margin-right": 20,
+    "margin-left": 8, // Adjust these to make the pill wider or narrower
+    "margin-right": 8,
     "height": 40,
     "spacing": 15,
 
