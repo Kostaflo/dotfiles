@@ -29,7 +29,7 @@
 
     "mpris": {
         "format": "{player_icon} {artist} - {title}",
-        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "format-paused": "{status_icon} <i>{artist} - {title}</i>",
         "player-icons": {
             "default": "▶",
             "spotify": " ",
