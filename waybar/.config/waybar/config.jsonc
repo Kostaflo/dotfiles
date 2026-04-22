@@ -9,8 +9,8 @@
 
     // Module Layout
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "battery"],
+    "modules-center": ["clock", "mpris"],
+    "modules-right": ["pulseaudio", "network", "battery",],
 
     // --- Module Configurations ---
 
@@ -25,6 +25,20 @@
     "clock": {
         "format": "{:%a %d %b  %H:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {artist} - {title}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": {
+            "default": "▶",
+            "spotify": " ",
+            "firefox": " "
+        },
+        "status-icons": {
+            "paused": "⏸ "
+        },
+        "max-length": 40
     },
 
     "pulseaudio": {
@@ -52,5 +66,6 @@
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-icons": ["", "", "", "", ""]
-    }
+    },
+
 }

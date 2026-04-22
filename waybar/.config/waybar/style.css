@@ -21,21 +21,27 @@ window#waybar {
 
 /* --- Left Modules --- */
 #workspaces {
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 #workspaces button {
-    color: @surface2; /* Darker grey for inactive dots */
-    padding: 0 6px;
-    transition: color 0.2s ease;
+    color: @subtext0;
+    background: transparent;
+    border-radius: 8px; /* Στρογγυλεμένες άκρες για το κάθε κουμπί */
+    margin: 6px 4px;
+    padding: 0 5px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth animation */
 }
 
 #workspaces button.active {
-    color: @mauve; /* The pop of color! */
+    color: @base;
+    background: @mauve;
+    padding: 0 12px;
+    font-weight: 900;
 }
 
 #workspaces button:hover {
-    background: transparent;
+    background: @surface0;
     color: @text;
     box-shadow: none;
 }
@@ -43,6 +49,12 @@ window#waybar {
 /* --- Center Module --- */
 #clock {
     color: @text;
+}
+
+#mpris {
+    color: @lavender;
+    padding: 0 15px;
+    font-size: 14px;
 }
 
 /* --- Right Modules --- */
@@ -54,6 +66,7 @@ window#waybar {
 #battery {
     padding-right: 20px;
 }
+
 
 /* Make battery turn red when dying */
 #battery.warning { color: @peach; }
