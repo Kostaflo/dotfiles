@@ -65,3 +65,10 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Enable Wayland for Firefox
 export MOZ_ENABLE_WAYLAND=1
+
+# --- Custom Functions ---
+
+# Δημιουργεί φάκελο και μπαίνει κατευθείαν μέσα
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
