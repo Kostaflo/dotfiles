@@ -60,9 +60,10 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 2px solid @lavender;
-  border-radius: 8px;
-  background-color: @base;
+  border: none;                             
+  border-radius: 12px;                     
+  background-color: rgba(30, 30, 46, 0.85); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
 }
 
 /* Inner Box */
@@ -129,8 +130,16 @@ window {
   border: 0.11em solid @lavender;
 }
 
-#entry:selected #text {
-  color: @mauve;
+#entry:selected {
+    background-color: #cba6f7; /* Το χαρακτηριστικό Μωβ (Mauve) του Catppuccin */
+    color: #1e1e2e;            /* Σκούρο χρώμα στα γράμματα για να κάνουν αντίθεση με το μωβ */
+    border-radius: 8px;        /* Στρογγυλεμένες γωνίες, όπως έκανες και στη Waybar */
+    border: none;              /* Διώχνουμε το παλιό περίγραμμα */
+    outline: none;
+}
+
+#entry:selected * {
+    color: #1e1e2e;
 }
 
 #entry:drop(active) {
