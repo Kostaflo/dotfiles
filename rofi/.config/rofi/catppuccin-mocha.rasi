@@ -1,0 +1,131 @@
+/* =============================================================================
+ * Catppuccin Mocha — Rofi Theme
+ * Matches: waybar pill aesthetic, CaskaydiaCove NF, mauve accents
+ * ============================================================================= */
+
+* {
+    /* Palette */
+    base:       #1e1e2e;
+    mantle:     #181825;
+    crust:      #11111b;
+    surface0:   #313244;
+    surface1:   #45475a;
+    surface2:   #585b70;
+    overlay0:   #6c7086;
+    overlay1:   #7f849c;
+    subtext0:   #a6adc8;
+    subtext1:   #bac2de;
+    text:       #cdd6f4;
+    mauve:      #cba6f7;
+    lavender:   #b4befe;
+    blue:       #89b4fa;
+    sapphire:   #74c7ec;
+    teal:       #94e2d5;
+    green:      #a6e3a1;
+    yellow:     #f9e2af;
+    peach:      #fab387;
+    red:        #f38ba8;
+    pink:       #f5c2e7;
+    flamingo:   #f2cdcd;
+    rosewater:  #f5e0dc;
+
+    /* Defaults */
+    background-color:   transparent;
+    text-color:         @text;
+    border-color:       transparent;
+    outline-color:      transparent;
+    font:               "CaskaydiaCove Nerd Font 13";
+}
+
+/* === Window === */
+window {
+    width:              420px;
+    background-color:   @base;
+    border-radius:      16px;
+    padding:            12px;
+    border:             0px;
+}
+
+/* === Main layout === */
+mainbox {
+    background-color:   transparent;
+    spacing:            8px;
+    padding:            0px;
+    children:           [ inputbar, listview ];
+}
+
+/* === Search bar === */
+inputbar {
+    background-color:   @surface0;
+    border-radius:      10px;
+    padding:            8px 12px;
+    spacing:            8px;
+    children:           [ prompt, entry ];
+}
+
+prompt {
+    background-color:   transparent;
+    text-color:         @mauve;
+    font:               "CaskaydiaCove Nerd Font Bold 13";
+}
+
+entry {
+    background-color:   transparent;
+    text-color:         @text;
+    placeholder:        "Search apps...";
+    placeholder-color:  @overlay0;
+    cursor:             text;
+}
+
+/* === App list === */
+listview {
+    background-color:   transparent;
+    spacing:            2px;
+    padding:            4px 0px;
+    lines:              8;
+    columns:            1;
+    scrollbar:          false;
+    fixed-height:       false;
+}
+
+/* === Each entry === */
+element {
+    background-color:   transparent;
+    border-radius:      10px;
+    padding:            7px 10px;
+    spacing:            10px;
+    orientation:        horizontal;
+    children:           [ element-icon, element-text ];
+}
+
+element-icon {
+    background-color:   transparent;
+    size:               22px;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         @text;
+    vertical-align:     0.5;
+}
+
+/* === Selected entry === */
+element selected {
+    background-color:   @mauve;
+    border-radius:      10px;
+}
+
+element-text selected {
+    text-color:         @base;
+    font:               "CaskaydiaCove Nerd Font Bold 13";
+}
+
+element-icon selected {
+    background-color:   transparent;
+}
+
+/* === Hover === */
+element normal active,
+element alternate active {
+    text-color:         @mauve;
+}

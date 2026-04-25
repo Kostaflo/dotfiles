@@ -1,4 +1,7 @@
 show=drun
 prompt=Search apps...
 allow_images=true
-image_size=24
+image_size=20
+width=380
+height=420
+lines=7
