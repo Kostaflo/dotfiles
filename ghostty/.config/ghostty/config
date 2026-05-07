@@ -6,4 +6,3 @@ background-opacity = 0.9
 shell-integration-features = no-cursor
 cursor-style = block
 gtk-titlebar = false
-
