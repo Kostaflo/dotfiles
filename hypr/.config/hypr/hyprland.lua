@@ -274,7 +274,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m window -o ~/Pictures/Screenshots/"), { locked = true })
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Screenshots/"), { locked = true })
---hl.bind("SUPER_SHIFT + L", hl.dsp.exec_cmd("playerctl pause & hyprlock"), { locked = true })
+hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("playerctl pause & hyprlock"), { locked = true })
 hl.bind("SUPER + B", hl.dsp.exec_cmd("firefox"), { locked = true })
 
 --------------------------------
