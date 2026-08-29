@@ -31,8 +31,12 @@ local menu        = "rofi -show drun -theme ~/.config/rofi/catppuccin-mocha.rasi
 -------------------
 
 --
-hl.on("hyprland.start", function () 
-  hl.exec_cmd("waybar & hyprpaper & & swaync & hypridle & easyeffects --gapplication-service")
+hl.on("hyprland.start", function ()
+  hl.exec_cmd("waybar")
+  hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("swaync")
+  hl.exec_cmd("hypridle")
+  hl.exec_cmd("easyeffects --gapplication-service")
 end)
 
 
@@ -82,7 +86,7 @@ hl.config({
             enabled      = true,
             range        = 15,
             render_power = 3,
-            color        = rgba(11111baa),
+            color        = 0xee1a1a1a,
         },
 
         blur = {
@@ -270,7 +274,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m window -o ~/Pictures/Screenshots/"), { locked = true })
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Screenshots/"), { locked = true })
-hl.bind("SUPER_SHIFT + L", hl.dsp.exec_cmd("playerctl pause & hyprlock"), { locked = true })
+--hl.bind("SUPER_SHIFT + L", hl.dsp.exec_cmd("playerctl pause & hyprlock"), { locked = true })
 hl.bind("SUPER + B", hl.dsp.exec_cmd("firefox"), { locked = true })
 
 --------------------------------
