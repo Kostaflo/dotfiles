@@ -186,7 +186,7 @@ hl.config({
 
 hl.config({
     input = {
-        kb_layout  = "us", "gr",
+        kb_layout  = "us, gr",
         kb_variant = "",
         kb_model   = "",
         kb_options = "grp:alt_shift_toggle",
