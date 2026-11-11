@@ -72,3 +72,5 @@ export MOZ_ENABLE_WAYLAND=1
 mkcd() {
     mkdir -p "$1" && cd "$1"
 }
+
+alias todocli="java -jar /home/kostaflo/dev/personal/todo-cli/target/todo-cli-1.0-SNAPSHOT-jar-with-dependencies.jar"
