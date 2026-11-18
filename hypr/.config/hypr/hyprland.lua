@@ -78,6 +78,10 @@ hl.config({
 		rounding = 10,
 		rounding_power = 2,
 
+		wobble = {
+			enabled = true,
+		},
+
 		-- Change transparency of focused and unfocused windows
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
