@@ -66,6 +66,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # Enable Wayland for Firefox
 export MOZ_ENABLE_WAYLAND=1
 
+# Set default editor
 export EDITOR=nvim
 
 # --- Custom Functions ---
@@ -75,4 +76,7 @@ mkcd() {
     mkdir -p "$1" && cd "$1"
 }
 
+# Things for todo-cli project
 alias tdc="java -jar /home/kostaflo/dev/personal/todo-cli/target/todo-cli-1.0-SNAPSHOT-jar-with-dependencies.jar"
+source <(tdc generate-completion)
+
