@@ -66,6 +66,8 @@ eval "$(zoxide init --cmd cd zsh)"
 # Enable Wayland for Firefox
 export MOZ_ENABLE_WAYLAND=1
 
+export EDITOR=nvim
+
 # --- Custom Functions ---
 
 # Δημιουργεί φάκελο και μπαίνει κατευθείαν μέσα
