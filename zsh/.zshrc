@@ -80,3 +80,5 @@ mkcd() {
 alias tdc="java -jar /home/kostaflo/dev/personal/todo-cli/target/todo-cli-1.0-SNAPSHOT-jar-with-dependencies.jar"
 source <(tdc generate-completion)
 
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
